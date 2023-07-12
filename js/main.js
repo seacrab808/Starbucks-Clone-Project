@@ -1,22 +1,3 @@
-// 검색버튼 누르면 placeholder 값 변경
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function() {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function() {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function() {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
-
 // 스크롤 하면 badge 사라지게
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -160,9 +141,3 @@ spyEls.forEach(function (spyEl) {
   //Scene은 감시, setClassToggle <- 클래스 속성을 토글로 지정, addTo <-컨트롤러 개념
   //체이닝 형태로 작성해서 가독성 업
 });
-
-
-//올해 년도 계산 
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
-
